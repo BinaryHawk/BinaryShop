@@ -1,14 +1,16 @@
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import { Container } from 'react-bootstrap';
+import HomePage from './pages/HomePage.js';
 
 function App() {
   return (
     <>
     <Header/>
     <Container>
-      <main main style={{height : "85vh"}}> 
-        <h1> welcome to BinaryShop</h1>
+      <main className='py-2' style={{height : "85vh"}}> 
+        <h1> Welcome to BinaryShop</h1>
+        <HomePage/>
       </main>
     </Container>
     <Footer/>
