@@ -1,15 +1,26 @@
 import React from 'react'
-import {Container, Nav, Navbar} from 'react-bootstrap'
-import {AiOutlineShoppingCart, AiOutlineUser, AiOutlineHome} from 'react-icons/ai'
+import {Button, Container, Nav, Navbar} from 'react-bootstrap'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { LinkContainer } from "react-router-bootstrap";
+
+import Login from "../components/Login";
+
 
 function Header() {
   return (
-    <Navbar bg="primary" variant="dark">
+    <Navbar bg="primary" variant="dark" sticky='top' >
         <Container>
-        <Navbar.Brand href="/">BinaryShop</Navbar.Brand>
+          <LinkContainer to={`/`}>
+            <Navbar.Brand>BinaryShop</Navbar.Brand>
+          </LinkContainer>
         <Nav className="ml-auto">
-            <Nav.Link href="#features" ><AiOutlineShoppingCart className='mx-1 mb-1'/>Cart</Nav.Link>
-            <Nav.Link href="#pricing"><AiOutlineUser className='mx-1 mb-1'/>Login</Nav.Link>
+          <LinkContainer to={'/Cart'}>
+            <Button className='mx-1' variant='outline-light'>
+              <AiOutlineShoppingCart className='mx-1'/>
+              Cart
+            </Button>
+          </LinkContainer>
+          <Login/>
         </Nav>
         </Container>
     </Navbar>

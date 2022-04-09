@@ -1,12 +1,17 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 
 function Footer() {
   return (
+    <footer>
       <Container>
-        <footer className='text-center py-3'>Copyrights &copy;</footer>
+        <Row>
+          <Col className='text-center py-3'>
+            Copyrights &copy;
+          </Col>
+        </Row>
       </Container>
-
+    </footer>
   )
 }
 
